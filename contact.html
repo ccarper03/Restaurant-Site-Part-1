@@ -4,66 +4,131 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Contact</title>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/restaurantStyles.css">
   <style>
-      h1, footer{
-        text-align: center;
-      }
-    </style>
+  </style>
+  <title>Contact</title>
 </head>
 <body>
+
   <!-- Header -->
   <header>
-    <h1>Chuckie's Chips</h1> 
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Chuckie's Chips</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark fas fa-home" href="index.html"></a>
+        <a class="p-2 text-dark" href="menu.html">MENU</a>
+        <a class="p-2 text-dark" href="contact.html">CONTACT</a>
+      </nav>
+      <a class="btn btn-outline-primary" href="#">Buy Now</a>
+    </div>
+    <!-- <h1>Chuckie's Chips</h1> 
     <hr>
     <nav>
-      <a href="index.html">HOME</a>
-      <a href="menu.html">MENU</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="menu.html">MENU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+      </nav>
     <hr>
-  </header>
+  </header> -->
+  <!-- End Header -->
 
   <!-- Form Section -->
   <section>
     <form action="submit.html" method="POST"> 
-      <label for="name">Name:</label>
-        <input type="text" name="name" id="name"> <br>
-
-        <label for="email">Email:</label> 
-        <input type="text" name="email" id="email"> <br>
-
-        <label for="phone">Phone Number:</label> 
-        <input type="text" name="phone" id="phone"> <br>
-
-        <label for="quiry">Reaseon for Inquiry:</label> 
-        <select name="quiry" id="quiry">
-          <optgroup>
-            <option value="catering" selected>Catering</option>
-            <option value="private" >Private Party</option>
-            <option value="feedback" >Feedback</option>
-            <option value="other" >Other</option>
-          </optgroup>
-        </select> <br>
-
-        <label for="addInfo">Additional Information:</label> 
-        <textarea name="addInfo" id="addInfo" cols="30" rows="10"></textarea><br>
-
-        <label for="haveVisited">Have you been to the restaurant:</label> 
-        <input type="radio" name="haveVisited" id="haveVisited" value="false" checked> No 
-        <input type="radio" name="haveVisited" id="haveVisited" value="true" > Yes  <br>
-       
-        <label for="contactDays">Best days to contact you:</label> 
-        <input type="checkbox" name="contactDays" id="contactDays" value="monday">M
-        <input type="checkbox" name="contactDays" id="contactDays" value="tuesday">T
-        <input type="checkbox" name="contactDays" id="contactDays" value="wednesday">W
-        <input type="checkbox" name="contactDays" id="contactDays" value="thursday">Th
-        <input type="checkbox" name="contactDays" id="contactDays" value="friday">F <br>
-
-        <input type="submit" />
+        <div class="controls">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_name">Firstname *</label>
+                <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *"
+                  required="required" data-error="Firstname is required.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_lastname">Lastname *</label>
+                <input id="form_lastname" type="text" name="surname" class="form-control"
+                  placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_email">Email *</label>
+                <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *"
+                  required="required" data-error="Valid email is required.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="form_need">Reaseon for Inquiry: *</label>
+                <select id="form_need" name="need" class="form-control" required="required"
+                  data-error="Please specify your need.">
+                  <optgroup>
+                    <option value="catering" selected>Catering</option>
+                    <option value="private">Private Party</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                  </optgroup>
+                </select> <br>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <label for="haveVisited">Have you been to the restaurant:</label>
+          <input type="radio" name="haveVisited" id="haveVisited" value="false" checked> No
+          <input type="radio" name="haveVisited" id="haveVisited" value="true"> Yes <br>
+          <label for="contactDays">Best days to contact you:</label>
+          <input type="checkbox" name="contactDays" id="contactDays" value="monday">M
+          <input type="checkbox" name="contactDays" id="contactDays" value="tuesday">T
+          <input type="checkbox" name="contactDays" id="contactDays" value="wednesday">W
+          <input type="checkbox" name="contactDays" id="contactDays" value="thursday">Th
+          <input type="checkbox" name="contactDays" id="contactDays" value="friday">F <br>
+          <div class="row">
+            <div class="col-md-12">
+              <p class="text-muted">
+                <strong>*</strong> These fields are required. Contact form template by
+                <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form"
+                  target="_blank">Bootstrapious</a>.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="form_message">Message *</label>
+              <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4"
+                required="required" data-error="Please, leave us a message."></textarea>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <input type="submit" class="btn btn-success btn-send" value="Send message">
+          </div>
+        </div>
     </form>
   </section>
-  
+  <!-- End Form Section -->
+
   <!-- Footer -->
   <footer>
     <hr>
@@ -72,5 +137,12 @@
       302-396-5203
     </address>
   </footer>
+  <!-- End Footer -->
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

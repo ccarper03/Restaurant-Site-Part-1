@@ -1,0 +1,89 @@
+h1, footer{
+  text-align: center;
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  font-weight: bold;
+}
+
+/* selected link */
+a:active {
+  text-decoration-line: none;
+  color: blue;
+}
+
+#sendBtn{
+  padding: .5rem;
+}
+form > label{
+  font-weight: bold;
+}
+
+#drinks > table{
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#drinks > td,th 
+{
+    font-size: 14px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+
+#drinks > tr {
+  display: table-row;
+  vertical-align: inherit;
+}
+
+#drinks tr:nth-child(even) {
+  background: white;
+}
+
+#drinks tr:nth-child(odd) {
+  background-color: mintcream;
+}
+
+#drinks th {
+  color: white;
+  background-color: #871a1a;
+  text-align: left;
+}
+
+#restDesc > p{
+margin-left: 30%;
+margin-right: 30%;
+padding-bottom:2rem ; 
+}
+#restDesc > h2{
+  padding:1rem ; 
+}
+#restDesc > img{
+  padding-top:2rem;
+}
+
+#myCarouselItem > div > h3,p {
+ text-align: center;
+
+}
+
+#myCarousel{
+  padding-bottom: 40px;
+}

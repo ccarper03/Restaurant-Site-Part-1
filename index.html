@@ -4,29 +4,149 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Home</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles/restaurantStyles.css">
+
+  <!-- For the Carousel -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
   <style>
-      h1, footer{
-        text-align: center;
-      }
-    </style>
+
+  #mainSection{
+    background-color: beige;
+  }
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  </style>
+  <title>Home</title>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Chuckie's Chips</h1> 
-    <hr>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="menu.html">MENU</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-    <hr>
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+          <h5 class="my-0 mr-md-auto font-weight-normal">Chuckie's Chips</h5>
+          <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark fas fa-home" href="index.html"></a>
+            <a class="p-2 text-dark" href="menu.html">MENU</a>
+            <a class="p-2 text-dark" href="contact.html">CONTACT</a>
+          </nav>
+          <a class="btn btn-outline-primary" href="#">Buy Now</a>
+        </div>
+    
+      <!--
+      <h1>Chuckie's Chips</h1> 
+      <hr> 
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html">MENU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">CONTACT</a>
+          </li>
+        </ul>
+      </nav>
+      <hr>
+      -->
+    
   </header>
-  <section>
-    <article>
-      <img src="img/chips-in-bowl.png" alt="">
-      <p style="width: 400px">
-          Resturaunt Description <br/>  
+  <!-- End Header -->
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Grand Opening</h1>
+        <p class="lead">All you can eat chips, come and get it while supplies last!</p>
+      </div>
+    </div>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div id="myCarouselItem" class="carousel-inner">
+            <div class="item active">
+              <img src="img/1.jpg" alt="Los Angeles" style="width:100%;">
+              <h3>
+                  Opening New Location
+              </h3>
+              <p>
+                <a href="" class="btn btn-lg btn-primary">Learn More</a>
+              </p>
+            </div>
+      
+            <div class="item">
+              <img src="img/2.jpg" alt="Chicago" style="width:100%;">
+              <h3>
+                  We're rolling out our seasonal menu, with special options for this season.
+              </h3>
+              <p>
+                <a href="" class="btn btn-lg btn-primary">Learn More</a>
+              </p>
+            </div>
+          
+            <div class="item">
+              <img src="img/3.jpg" alt="New york" style="width:100%;">
+              <h3>
+                  The Drink of the Month is SG Special Brew.
+              </h3>
+              <p>
+                <a href="" class="btn btn-lg btn-primary">Learn More</a>
+              </p>
+            </div>
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+
+  <!-- Section -->
+  <section id="mainSection">
+    <article id="restDesc">
+      <img  style="display:block; margin-left: auto;
+      margin-right: auto;
+      width: 30%;" src="img/chips-in-bowl.png" alt="">
+      
+      <h2 style="text-align: center;">Resturaunt Description</h2>
+      <p style="text-align: center;">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
           when an unknown printer took a galley of type and scrambled it to make a type 
@@ -38,8 +158,9 @@
       </p>
     </article>
   </section>
+  <!-- End Section -->
 
-  
+  <!-- Footer -->
   <footer>
     <hr>
     <address> 
@@ -47,5 +168,12 @@
       302-396-5203
     </address>
   </footer>
+  <!-- End Footer -->
+
+  <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
